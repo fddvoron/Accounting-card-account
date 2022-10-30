@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'DOS';
+    font-style: normal;
+    font-weight: 400;
+    src: url(dos.ttf) format('truetype');
+}
+
+A {
+    text-decoration: none; 
+    color: #008000;
+   } 
+
+A:hover { 
+    color: black;
+	background: #008000; 
+   } 
+
+body {
+	font-family: 'DOS', monospace;
+    letter-spacing: 1px;
+	font-size: 16px;
+	color: #008000;
+	background: black; 
+    text-align: justify;
+}
+
+input[type=text] {
+    padding: 5px 5px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #008000;
+    font-family: inherit;
+    font-size: inherit;
+    color: #008000;
+	background: black; 
+}
+
+input[type=text]:focus {
+    border: 1px solid #008000;
+}
+
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   color: #008000;
+   background: black; 
+   border: 1px solid #008000;
+   border-radius: 4px;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   font-family: inherit;
+   font-size: inherit;
+   margin: 0;
+   overflow: hidden;
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+
+input[type=submit] {
+   color: #008000;
+   background: black; 
+   font-family: monospace;
+   font-size: 16px;
+   border: 1px solid #008000;
+}
+
+table {
+  font-family: inherit;
+  font-size: inherit;
+  max-width: 60%;
+  width: 60%;
+  border-collapse: collapse;
+  text-align: justify;
+  margin: auto;  
+}
+
+td {
+   padding: 6px;
+   border: 1px dotted #008000;
+}
+
+table#taskview td
+{
+   border: 1px dotted #008000;
+   width: 20%;
+}
+
+table#taskform
+{
+   font-family: inherit;
+   font-size: inherit;
+   width: 35%;
+   margin: auto;  
+}
