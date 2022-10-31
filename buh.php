@@ -34,7 +34,7 @@ switch($idmode)
 
 case cash:
 
-echo '<table id="taskform" border="0" cellspacing="0"><form id="form1" name="form1" method="post" action="buhdb.php?mode=in">';
+echo '<table id="taskform" border="0" cellspacing="0"><form id="form1" name="form1" method="post" action="buh.php">';
 echo '<tr><td>Доходная транзакция</td><td><select name="idtsform" size = "1">';
 
 $incomeTransactionTypes = DB_GetIncomeTransactionsTypes();
@@ -44,7 +44,8 @@ $incomeTransactionTypes = DB_GetIncomeTransactionsTypes();
 
 echo '</select></td></tr>';
 echo '<tr><td>Сумма транзакции</td><td><input name="inform" type="text" size="10" maxlength="10" placeholder="0.00" required /></td></tr>';
-echo '<tr><td colspan="2" align="center"><input type="submit" name="Submit" value="Добавить" /></form></td></tr></table></p>';
+echo '<tr><td colspan="2" align="center"><input type="submit" name="InSubmit" value="Добавить" /></form></td></tr></table></p>';
+
 
 break;
 
@@ -87,8 +88,6 @@ echo '<tr><td colspan="4" align="center">'.$mtext[$m].' '.$god.' год</td></tr
 echo '<tr><td align="center">Дата</td><td align="center">Транзакция</td><td align="center">Доход</td><td align="center">Расход</td></tr>';
 
 $monthTransactions = DB_GetMonthsTransactions($god, $m);
-// print_r ($monthTransactions);
-
  foreach($monthTransactions as $trType){
 $datecreated = $trType['date'];
 $datecreated = date("d.m.Y", strtotime($datecreated));
@@ -199,7 +198,7 @@ echo '</tr>';
 }
 echo '</table><p>';
 
-echo '<table id="taskform" border="0" cellspacing="0"><form id="form1" name="form1" method="post" action="buhdb.php?mode=out">';
+echo '<table id="taskform" border="0" cellspacing="0"><form id="form1" name="form1" method="post" action="buh.php">';
 echo '<tr><td>Расходная транзакция</td><td><select name="idtsform" size = "1">';
 
 $outcomeTransactionTypes = DB_GetOutcomeTransactionsTypes();
@@ -209,7 +208,20 @@ $outcomeTransactionTypes = DB_GetOutcomeTransactionsTypes();
 
 echo '</select></td></tr>';
 echo '<tr><td>Сумма транзакции</td><td><input name="outform" type="text" size="10" maxlength="10" placeholder="0.00" required /></td></tr>';
-echo '<tr><td colspan="2" align="center"><input type="submit" name="Submit" value="Добавить" /></form></td></tr></table></p>';
+echo '<tr><td colspan="2" align="center"><input type="submit" name="OutSubmit" value="Добавить" /></form></td></tr></table></p>';
+
+if(isset($_POST['OutSubmit']))
+{
+DB_InsertOutcomeTransaction();
+echo '<meta http-equiv="refresh" content="0;URL=buh.php">';
+}
+
+if(isset($_POST['InSubmit']))
+{
+DB_InsertIncomeTransaction();
+echo '<meta http-equiv="refresh" content="0;URL=buh.php">';
+}
+
 
 }
 mysql_close($dblink);

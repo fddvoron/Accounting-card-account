@@ -66,7 +66,6 @@ function DB_GetTypeTransactions($god, $idts){
   return $result;
 }
 
-
 function DB_GetCurrentDateTransactions(){
   global $buhview;
 $query = mysql_query("SELECT * FROM $buhview WHERE DATE(date) = CURRENT_DATE ORDER BY date ASC");
@@ -77,7 +76,21 @@ $query = mysql_query("SELECT * FROM $buhview WHERE DATE(date) = CURRENT_DATE ORD
   return $result;
 }
 
+function DB_InsertOutcomeTransaction(){
+  global $buhtable;
+  $trans = (int)$_POST['idtsform'];
+  $outnew = $_POST['outform'];
+  $outnew= str_replace(",",".",$outnew);
+  mysql_query("INSERT INTO $buhtable (idts, income, outcome) VALUES ('$trans', 0, '$outnew')");
+}
 
+function DB_InsertIncomeTransaction(){
+  global $buhtable;
+  $trans = (int)$_POST['idtsform'];
+  $innew = $_POST['inform'];
+  $innew= str_replace(",",".",$innew);
+  mysql_query("INSERT INTO $buhtable (idts, income, outcome) VALUES ('$trans', '$innew', 0)");
+}
 
 
 
