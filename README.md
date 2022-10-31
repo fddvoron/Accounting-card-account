@@ -2,4 +2,4 @@
 
 Это моя первая публикация проекта в гихбате. Просьба отнестись с пониманием.  
 Домашняя бухгалтерия. Карт-счет писал для себя. Использую в работе уже год.
-![screenshot](https://user-images.githubusercontent.com/100441965/198869674-2f3667ce-d9ce-4bb7-bc90-c843096cc9b9.jpg)
+![screenshot](https://user-images.githubusercontent.com/100441965/199015146-849231fa-3333-4a3b-b19f-7a272b5fc937.jpg)
