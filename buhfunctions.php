@@ -76,20 +76,20 @@ $query = mysql_query("SELECT * FROM $buhview WHERE DATE(date) = CURRENT_DATE ORD
   return $result;
 }
 
-function DB_InsertOutcomeTransaction(){
+function DB_InsertOutcomeTransaction($accountid){
   global $buhtable;
   $trans = (int)$_POST['idtsform'];
   $outnew = $_POST['outform'];
   $outnew= str_replace(",",".",$outnew);
-  mysql_query("INSERT INTO $buhtable (idts, income, outcome) VALUES ('$trans', 0, '$outnew')");
+  mysql_query("INSERT INTO $buhtable (account, idts, income, outcome) VALUES ('$accountid', '$trans', 0, '$outnew')");
 }
 
-function DB_InsertIncomeTransaction(){
+function DB_InsertIncomeTransaction($accountid){
   global $buhtable;
   $trans = (int)$_POST['idtsform'];
   $innew = $_POST['inform'];
   $innew= str_replace(",",".",$innew);
-  mysql_query("INSERT INTO $buhtable (idts, income, outcome) VALUES ('$trans', '$innew', 0)");
+  mysql_query("INSERT INTO $buhtable (account, idts, income, outcome) VALUES ('$accountid', '$trans', '$innew', 0)");
 }
 
 

@@ -4,5 +4,17 @@ CREATE TABLE buhts (id int(3) NOT NULL PRIMARY KEY auto_increment, transaction T
 
 CREATE VIEW buhview AS SELECT buh.id, buh.date, buh.idts, buhts.transaction, buh.income, buh.outcome FROM buh JOIN buhts ON buhts.id = buh.idts 
 
-INSERT INTO `buhts` (`id`, `transaction`) VALUES (100, 'PAY IN'), (101, 'MONEYBACK PAY'), (200, 'EVROOPT'), (201, 'SHOPS'), (202, 'ERIP PAY'), (203, 'INTERNET PAY'), (102, 'INTEREST PAY'), (204, 'PHARMACY'), (205, 'CASH OUT');
-
+INSERT INTO `buhts` (`id`, `transaction`) VALUES
+(100, 'INCOME'),
+(101, 'MONEYBACK'),
+(200, 'SHOP'),
+(201, 'ON CREDIT'),
+(202, 'ERIP'),
+(203, 'E-PAYMENTS'),
+(102, 'INTEREST'),
+(204, 'PHARMACY'),
+(205, 'WITHDRAWAL'),
+(206, 'POST OFFICE'),
+(207, 'TELECOM'),
+(208, 'STORNO IN'),
+(103, 'STORNO OUT');
