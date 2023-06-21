@@ -6,21 +6,21 @@
 }
 
 A {
+    color: black;
     text-decoration: none; 
-    color: #008000;
-   } 
+  } 
 
 A:hover { 
-    color: black;
-	background: #008000; 
-   } 
+    color: white;
+	background: black; 
+} 
 
 body {
 	font-family: 'DOS', monospace;
     letter-spacing: 1px;
 	font-size: 16px;
-	color: #008000;
-	background: black; 
+	color: black;
+	background: white; 
     text-align: justify;
 }
 
@@ -28,11 +28,11 @@ input[type=text] {
     padding: 5px 5px;
     margin: 8px 0;
     border-radius: 4px;
-    border: 1px solid #008000;
+    border: 1px solid black;
     font-family: inherit;
     font-size: inherit;
-    color: #008000;
-	background: black; 
+    color: black;
+	background: white; 
 }
 
 input[type=text]:focus {
@@ -43,9 +43,9 @@ select {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
-   color: #008000;
-   background: black; 
-   border: 1px solid #008000;
+   color: black;
+   background: white; 
+   border: 1px solid black;
    border-radius: 4px;
    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
    font-family: inherit;
@@ -57,11 +57,11 @@ select {
 }
 
 input[type=submit] {
-   color: #008000;
-   background: black; 
+   color: black;
+   background: white; 
    font-family: inherit;
    font-size: 16px;
-   border: 1px solid #008000;
+   border: 1px solid black;
 }
 
 table {
@@ -76,12 +76,12 @@ table {
 
 td {
    padding: 6px;
-   border: 1px dotted #008000;
+   border: 1px dotted black;
 }
 
 table#taskview td
 {
-   border: 1px dotted #008000;
+   border: 1px dotted black;
    width: 20%;
 }
 
