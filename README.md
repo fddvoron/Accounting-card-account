@@ -10,4 +10,4 @@
 - Просмотр по видам операций;
 - Отображения баланса счета.
 
-![screenshot](https://user-images.githubusercontent.com/100441965/199015146-849231fa-3333-4a3b-b19f-7a272b5fc937.jpg)
+![изображение](https://github.com/fddvoron/Accounting-card-account/assets/100441965/100b600f-9e76-42c6-95b6-c47b49c0a902)
